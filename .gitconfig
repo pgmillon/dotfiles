@@ -1,0 +1,42 @@
+[user]
+  email = pgmillon@nuxeo.com
+  name = Pierre-Gildas MILLON
+[alias]
+  st = status -s
+  dt = difftool
+  ci = commit -m
+  lg = log --graph --abbrev-commit --decorate --date=relative  --format=format:'%C(bold red)%h%C(reset) %C(bold green)%d%C(reset) %C(bold blue)%ai %C(reset) %C(yellow)%ar%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+  lga = log --graph --abbrev-commit --decorate --date=relative  --format=format:'%C(bold red)%h%C(reset) %C(bold green)%d%C(reset) %C(bold blue)%ai %C(reset) %C(yellow)%ar%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+  amend = commit --amend
+  force-push = push -f
+[merge]
+  tool = meld
+  renormalize = true
+[mergetool]
+  keepBackup = false
+  prompt = false
+[diff]
+  tool = meld
+[difftool]
+  prompt = false
+[http]
+  sslVerify = false
+[giggle]
+  main-window-maximized = false
+  main-window-geometry = 1333x759+321+116
+  main-window-view = HistoryView
+  file-view-vpane-position = 510
+  history-view-vpane-position = 549
+[core]
+  autocrlf = input
+  editor=vim
+  excludesfile=~/.gitignore
+  safecrlf = warn
+  ignorecase = false
+  whitespace = trailing-space,space-before-tab
+[push]
+  default=current
+[pull]
+  rebase=true
+[apply]
+  whitespace = fix

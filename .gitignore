@@ -1,0 +1,6 @@
+.idea
+*.iml
+*.retry
+atlassian-ide-plugin.xml
+nuxeo-studio-app/studio.launch
+roles/cloudformation*/files/current.template
