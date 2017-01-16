@@ -9,6 +9,7 @@
   lga = log --graph --abbrev-commit --decorate --date=relative  --format=format:'%C(bold red)%h%C(reset) %C(bold green)%d%C(reset) %C(bold blue)%ai %C(reset) %C(yellow)%ar%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
   amend = commit --amend
   force-push = push -f
+  id = show -s --pretty=format:'%C(auto)%h%d'
 [merge]
   tool = meld
   renormalize = true
@@ -40,3 +41,7 @@
   rebase=true
 [apply]
   whitespace = fix
+#[filter "lfs"]
+#	clean = git-lfs clean -- %f
+#	smudge = git-lfs smudge -- %f
+#	required = true

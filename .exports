@@ -20,6 +20,8 @@ export P2=/home/pgmillon/pipes/err
 export EDITOR="/usr/bin/vim"
 export VISUAL="/usr/bin/vim"
 
+#export DOCKER_HOST=tcp://127.0.0.1:2376 DOCKER_TLS_VERIFY=1 DOCKER_CERT_PATH=~/.docker/ssl-localhost.lan
+
 if [ -e /usr/share/terminfo/x/xterm-256color ]; then
   export TERM='xterm-256color'
 else
