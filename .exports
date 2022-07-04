@@ -1,10 +1,16 @@
 #!/bin/bash
 
-export LANG=fr_FR.UTF-8
+export LANG=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+export PYTHONIOENCODING=UTF-8
+#export LANG=C
 
-export JAVA_HOME=/home/pgmillon/Applications/jdk1.8.0_45
+export JAVA_HOME=/usr/lib/jvm/java-18-openjdk
+#export JAVA_HOME=/home/pgmillon/Applications/jdk1.8.0_101
+export JAVA_PATH=$JAVA_HOME/bin/java
 export ANT_HOME=/home/pgmillon/Applications/apache-ant-1.7.1
-export M2_HOME=/home/pgmillon/Applications/apache-maven-3.3.3
+export M2_HOME=/home/pgmillon/Applications/apache-maven-3.5.3
+export CARGO_HOME=/home/pgmillon/.cargo
 export M2=$M2_HOME/bin
 export PLAY_HOME=/home/pgmillon/lib/play-2.0.1
 export PEAR_HOME=/home/pgmillon/pear
@@ -12,13 +18,28 @@ export GRADLE_HOME=/home/pgmillon/Applications/gradle-1.2
 export IVY_HOME=/home/pgmillon/Applications/apache-ivy-2.3.0
 export RUBY_HOME=/home/pgmillon/.rvm/rubies/ruby-2.0.0-p451
 export GEMS_HOME=/home/pgmillon/.rvm/gems/ruby-2.0.0-p451
-export NODE_MODULES=/home/pgmillon/node_modules
+export SHUNIT2_HOME=/home/pgmillon/Applications/shunit2-2.1.6/src
+export SONARSCANNER_HOME=/home/pgmillon/Applications/sonar-scanner-linux/
 export DOTFILER_PATH=/home/pgmillon/.dotfiles
+export LPASS_AGENT_TIMEOUT=0
+export PHPBREW_RC_ENABLE=1
 export P1=/home/pgmillon/.pipes/out
 export P2=/home/pgmillon/pipes/err
+export TF_PLUGIN_CACHE_DIR=/home/pgmillon/.terraform/cache/plugins
+
+export KEEPASS_KEY=/home/pgmillon/.keepass/master
+export KEEPASS_DB=/home/pgmillon/CloudStation/Documents/Passwords.kdbx
+
+export OKTA_MFA_CHOICE=token:hardware
 
 export EDITOR="/usr/bin/vim"
 export VISUAL="/usr/bin/vim"
+
+export AWS_DEFAULT_PROFILE="full-administrator-role_188670881089"
+export AWS_PROFILE="full-administrator-role_188670881089"
+export AWS_REGION="eu-west-1"
+
+export STEAM_RUNTIME_PREFER_HOST_LIBRARIES=0 STEAM_RUNTIME=1
 
 #export DOCKER_HOST=tcp://127.0.0.1:2376 DOCKER_TLS_VERIFY=1 DOCKER_CERT_PATH=~/.docker/ssl-localhost.lan
 
@@ -28,7 +49,7 @@ else
   export TERM='xterm-color'
 fi
 
-export PATH=~/bin:$DOTFILER_PATH/bin:$GRADLE_HOME/bin:$PLAY_HOME:$PEAR_HOME/bin:$JAVA_HOME/bin:$M2:node_modules/.bin:$NODE_MODULES/.bin:$RUBY_HOME/bin:$GEMS_HOME/bin:$ANT_HOME/bin:$PATH
+export PATH=~/bin:$DOTFILER_PATH/bin:$CARGO_HOME/bin:$GRADLE_HOME/bin:$PLAY_HOME:$PEAR_HOME/bin:$JAVA_HOME/bin:$M2:node_modules/.bin:$RUBY_HOME/bin:$GEMS_HOME/bin:$ANT_HOME/bin:$SONARSCANNER_HOME/bin:./bin:$PATH
 export LD_LIBRARY_PATH=/usr/lib:/usr/lib/i386-linux-gnu:$JAVA_HOME/jre/lib/i386:$LD_LIBRARY_PATH
 
 export XDEBUG_CONFIG="idekey=netbeans-xdebug"

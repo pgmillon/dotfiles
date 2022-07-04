@@ -1,15 +1,20 @@
 [user]
-  email = pgmillon@nuxeo.com
+  email = 715479+pgmillon@users.noreply.github.com
   name = Pierre-Gildas MILLON
+  signingkey = CFB26FFB70763E3F
 [alias]
   st = status -s
   dt = difftool
   ci = commit -m
   lg = log --graph --abbrev-commit --decorate --date=relative  --format=format:'%C(bold red)%h%C(reset) %C(bold green)%d%C(reset) %C(bold blue)%ai %C(reset) %C(yellow)%ar%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
   lga = log --graph --abbrev-commit --decorate --date=relative  --format=format:'%C(bold red)%h%C(reset) %C(bold green)%d%C(reset) %C(bold blue)%ai %C(reset) %C(yellow)%ar%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+  logone = log --pretty=format:'%C(auto)%m %h %Cgreen%ad %C(blue)%<(20)%aN %Creset%s %N %C(auto)%d' --left-right --cherry-pick --date=short
   amend = commit --amend
   force-push = push -f
   id = show -s --pretty=format:'%C(auto)%h%d'
+  pick = cherry-pick
+[log]
+  abbrevCommit = true
 [merge]
   tool = meld
   renormalize = true
@@ -35,13 +40,15 @@
   safecrlf = warn
   ignorecase = false
   whitespace = trailing-space,space-before-tab
+[fetch]
+  prune=true
 [push]
   default=current
 [pull]
   rebase=true
 [apply]
   whitespace = fix
-#[filter "lfs"]
-#	clean = git-lfs clean -- %f
-#	smudge = git-lfs smudge -- %f
-#	required = true
+[rebase]
+  autoStash = true
+[commit]
+  gpgsign = true
